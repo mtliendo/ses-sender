@@ -34,3 +34,22 @@ Be sure to replace the email values with the actual values needed
 ```bash
  aws ses send-templated-email --source mtliendo@focusotter.com --destination ToAddresses=mtliendo+test@focusotter.com --template curation-request --template-data '{ "name":"Michael", "description":"Just checking in", "companyName":"Focus Otter Solutions, LLC", "link":"http://blog.focusotter.cloud" }'
 ```
+
+Because the Lambda is called another AWS Service, the following must be attached:
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "VisualEditor0",
+			"Effect": "Allow",
+			"Action": "ses:SendTemplatedEmail",
+			"Resource": [
+				"arn:aws:ses:*:ACT_NUMBER:identity/*",
+				"arn:aws:ses:*:ACT_NUMBER:template/*"
+			]
+		}
+	]
+}
+```
