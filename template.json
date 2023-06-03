@@ -1,0 +1,8 @@
+{
+	"Template": {
+		"TemplateName": "curation-request",
+		"SubjectPart": "Greetings, {{name}}",
+		"HtmlPart": "<h1>Hello, {{name}}</h1><p>{{description}}</p><p>Company: {{companyName}}</p><p><a href='{{link}}'>Click Here</a></p>",
+		"TextPart": "Hello, {{name}}. {{description}}. Company: {{companyName}}. Link: {{link}}"
+	}
+}

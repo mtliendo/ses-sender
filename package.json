@@ -1,0 +1,16 @@
+{
+  "name": "ses-sender",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-cognito-identity-provider": "^3.345.0",
+    "@aws-sdk/client-ses": "^3.345.0"
+  }
+}
