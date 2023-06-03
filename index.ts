@@ -1,10 +1,3 @@
-/* Amplify Params - DO NOT EDIT
-API_C8GRAPHQL_GRAPHQLAPIENDPOINTOUTPUT
-API_C8GRAPHQL_GRAPHQLAPIIDOUTPUT
-ENV
-REGION
-Amplify Params - DO NOT EDIT */
-
 import { AdminGetUserCommandOutput } from '@aws-sdk/client-cognito-identity-provider'
 import { SESClient, SendTemplatedEmailCommand } from '@aws-sdk/client-ses'
 
@@ -26,7 +19,7 @@ export async function sendEmail(
 	const name = user.username
 	const description = ask.description
 	const templateName = 'curation-request'
-	const source = 'mtliendo@gmail.com'
+	const source = 'mtliendo@focusotter.com'
 	const link = 'https://curators.com'
 	const companyName = 'http://Curators.com'
 
@@ -36,7 +29,7 @@ export async function sendEmail(
 		Source: source,
 		Template: templateName,
 		Destination: {
-			ToAddresses: ['mtliendo@focusotter.com'] as string[],
+			ToAddresses: ['mtliendo+test@focusotter.com'] as string[],
 		},
 		TemplateData: JSON.stringify({
 			name: name,
