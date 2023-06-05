@@ -8,6 +8,7 @@
 3. Link to docs: https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-ses/
 4. I removed the `const userAttribute = ` code since it looks like it wasn't used in place of mock data
 5. Make sure the template name is correct and references a template you created
+6. Make sure the `user` and `description` values in your template have fallback options in case they are undefined
 
 From the docs:
 
