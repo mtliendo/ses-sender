@@ -16,12 +16,13 @@ export async function sendEmail(
 ): Promise<void> {
 	console.log('DEBUGGING: Inside sendEmail.ts.')
 
-	const name = user.username
-	const description = ask.description
+	const name = user.username || 'Person'
+	const description = ask.description || 'No description provided.'
 	const templateName = 'curation-request'
 	const source = 'mtliendo@focusotter.com'
 	const link = 'https://curators.com'
 	const companyName = 'http://Curators.com'
+	const toAddresses = ['mtliendo+test@focusotter.com']
 
 	const client = new SESClient({ region: 'us-east-1' })
 
@@ -29,7 +30,7 @@ export async function sendEmail(
 		Source: source,
 		Template: templateName,
 		Destination: {
-			ToAddresses: ['mtliendo+test@focusotter.com'] as string[],
+			ToAddresses: toAddresses,
 		},
 		TemplateData: JSON.stringify({
 			name: name,
